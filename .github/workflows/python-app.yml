@@ -54,3 +54,4 @@ jobs:
     - name: Test with pytest
       run: |
         python app.py
+        sudo netstat -tulnp | grep :5000
