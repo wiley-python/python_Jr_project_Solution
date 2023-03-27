@@ -1,0 +1,2 @@
+2023-03-26 20:54:06,165 INFO MainThread-64072: Starting the Flask User Management App... [in __init__.py:102]
+2023-03-26 20:54:06,200 INFO MainThread-64072: Initialized the database! [in __init__.py:49]
