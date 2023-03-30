@@ -11,6 +11,9 @@ now = datetime.datetime.now()
 class database:
     def create_database(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
+        print("Creating database")
+        sql="create database if not exists stock"
+        mycursor.execute(sql)
         mycursor = mydb.cursor()
         print(" Creating PRODUCT table")
         sql = "CREATE TABLE if not exists product (\
