@@ -1,7 +1,8 @@
 import pytest
 import mysql.connector
 import stockmanagement
-
+import datetime
+import matplotlib.pyplot as plt
 
 
 def test_before_add_order():
@@ -52,7 +53,7 @@ def test_after_delete_product():
 def test_report_generation():
     stockmanagement.stu.db_setup()
 
-    mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="studentmarks")
+    mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
     mycursor = mydb.cursor()
 
     print("Report Card Analysing...")
