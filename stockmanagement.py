@@ -172,11 +172,6 @@ class StudentDatabase:
     def db_setup(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
-        print("Creating student database")
-        sql = "create database if not exists studentmarks"
-        mycursor.execute(sql)
-        print("db created")
-        mycursor.execute(sql)
         print(" Creating student table")
         sql = "CREATE TABLE if not exists Students( Id int, Name varchar(20), M1 int, M2 int, M3 int);"
         mycursor.execute(sql)
