@@ -1,8 +1,7 @@
 import pytest
 import mysql.connector
 import stockmanagement
-import datetime
-import matplotlib.pyplot as plt
+
 
 
 def test_before_add_order():
