@@ -168,16 +168,16 @@ product.delete_product()
 product.drop_product()
 
 
-class StudentDatabase:
+class sales:
     def db_setup(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
-        print(" Creating student table")
-        sql = "CREATE TABLE if not exists Students( Id int, Name varchar(20), M1 int, M2 int, M3 int);"
+        print(" Creating sales table")
+        sql = "CREATE TABLE if not exists sales( Id int, ProductName varchar(20), yr2021 int, yr2022 int, yr2023 int);"
         mycursor.execute(sql)
         print("table created")
-        print("inserting student details")
-        sql = "INSERT INTO Students (Id,Name,M1,M2,M3) VALUES (%s, %s, %s, %s,%s);"
+        print("inserting sales details")
+        sql = "INSERT INTO Students (Id,ProductName,yr2021,yr2022,yr2023) VALUES (%s, %s, %s, %s,%s);"
         val = [(1, 'Neha', 90, 80, 90),
                (2, 'Sahil', 50, 60, 80),
                (3, 'Rohan', 70, 70, 80),
@@ -194,9 +194,9 @@ class StudentDatabase:
         mycursor = mydb.cursor()
 
         print("Report Card Analysing...")
-        sql = '''select Id, Name , M1,M2,M3, (M1+M2+M3) as sum, 
-              concat(round((((M1+M2+M3) / 300) * 100 ),2), '%') as percentage
-              from Students;'''
+        sql = '''select Id, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
+              concat(round((((yr2021+yr2022+yr2023) / 300) * 100 ),2), '%') as percentage
+              from sales;'''
         mycursor.execute(sql)
 
         result = mycursor.fetchall()
@@ -208,36 +208,36 @@ class StudentDatabase:
     def drop_db(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
-        sql = "drop table Students"
+        sql = "drop table sales"
         mycursor.execute(sql)
         print("drop table Students successfully")
 
-    def report_M1(self):
+    def report_yr2021(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
-        mycursor.execute("select Name, M1 from Students")
+        mycursor.execute("select ProductName, yr2021 from sales")
        # result = mycursor.fetchall
-        Names = []
-        M1 = []
+        ProductNames = []
+        yr2021 = []
 
         for i in mycursor:
-            Names.append(i[0])
-            M1.append(i[1])
+            ProductNames.append(i[0])
+            yr2021.append(i[1])
 
-        print("Name of Students = ", Names)
-        print("Marks of Students = ", M1)
+        print("Name of Students = ", ProductNames)
+        print("Marks of Students = ", yr2021)
 
         # Visualizing Data using Matplotlib
-        plt.bar(Names, M1)
+        plt.bar(ProductNames, yr2021)
         plt.ylim(0, 100)
-        plt.xlabel("Name of Students")
-        plt.ylabel("M1 Marks of Students")
-        plt.title("Student's Information")
+        plt.xlabel("Name of Product")
+        plt.ylabel("yr2021 sales of Product")
+        plt.title("Product sales Information 2021")
         plt.show()
 
 
 stu = StudentDatabase()
 stu.db_setup()
 stu.report_generation()
-stu.report_M1()
+stu.report_yr2021()
 stu.drop_db()
