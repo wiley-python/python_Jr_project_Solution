@@ -1,9 +1,7 @@
 # STOCK MANAGEMENT
 
-import os
 import mysql.connector
 import datetime
-import numpy as np
 import matplotlib.pyplot as plt
 
 now = datetime.datetime.now()
@@ -173,18 +171,19 @@ class sales:
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
         print(" Creating sales table")
-        sql = "CREATE TABLE if not exists sales( Id int, ProductName varchar(20), yr2021 int, yr2022 int, yr2023 int);"
+        sql = '''CREATE TABLE if not exists sales
+            ( salesid int, Productname varchar(20), yr2021 int, yr2022 int, yr2023 int)'''
         mycursor.execute(sql)
         print("table created")
         print("inserting sales details")
-        sql = "INSERT INTO Students (Id,ProductName,yr2021,yr2022,yr2023) VALUES (%s, %s, %s, %s,%s);"
-        val = [(1, 'Neha', 90, 80, 90),
-               (2, 'Sahil', 50, 60, 80),
-               (3, 'Rohan', 70, 70, 80),
-               (4, 'Ankita', 80, 40, 75),
-               (5, 'Rahul', 65, 50, 70),
-               (6, 'Swati', 55, 70, 65),
-               (7, 'Alka', 75, 80, 75)]
+        sql = "INSERT INTO sales (salesid, Productname, yr2021,yr2022,yr2023) VALUES (%s, %s, %s, %s, %s)"
+        val = [(1, 'P1', 90, 80, 50),
+               (2, 'P2', 50, 60, 80),
+               (3, 'P3', 70, 70, 80),
+               (4, 'P4', 80, 40, 75),
+               (5, 'P5', 65, 50, 70),
+               (6, 'P6', 55, 70, 65),
+               (7, 'P7', 75, 80, 75)]
         mycursor.executemany(sql, val)
         mydb.commit()
         print("inserted data")
@@ -194,7 +193,7 @@ class sales:
         mycursor = mydb.cursor()
 
         print("Report  Analysing...")
-        sql = '''select Id, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
+        sql = '''select salesid, Productname , yr2021, yr2022, yr2023, (yr2021+yr2022+yr2023) as sum, 
               concat(round((((yr2021+yr2022+yr2023) / 300) * 100 ),2), '%') as percentage
               from sales;'''
         mycursor.execute(sql)
@@ -215,20 +214,20 @@ class sales:
     def report_yr2021(self):
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
-        mycursor.execute("select ProductName, yr2021 from sales")
+        mycursor.execute("select Productname, yr2021 from sales")
        # result = mycursor.fetchall
-        ProductNames = []
+        Productnames = []
         yr2021 = []
 
         for i in mycursor:
-            ProductNames.append(i[0])
+            Productnames.append(i[0])
             yr2021.append(i[1])
 
-        print("Name of Students = ", ProductNames)
-        print("Marks of Students = ", yr2021)
+        print("Name of Products = ", Productnames)
+        print("sales of Products in 2021 = ", yr2021)
 
         # Visualizing Data using Matplotlib
-        plt.bar(ProductNames, yr2021)
+        plt.bar(Productnames, yr2021)
         plt.ylim(0, 100)
         plt.xlabel("Name of Product")
         plt.ylabel("yr2021 sales of Product")
