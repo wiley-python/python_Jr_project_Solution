@@ -193,7 +193,7 @@ class sales:
         mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
         mycursor = mydb.cursor()
 
-        print("Report Card Analysing...")
+        print("Report  Analysing...")
         sql = '''select Id, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
               concat(round((((yr2021+yr2022+yr2023) / 300) * 100 ),2), '%') as percentage
               from sales;'''
@@ -236,8 +236,8 @@ class sales:
         plt.show()
 
 
-stu = StudentDatabase()
-stu.db_setup()
-stu.report_generation()
-stu.report_yr2021()
-stu.drop_db()
+s = sales()
+s.db_setup()
+s.report_generation()
+s.report_yr2021()
+s.drop_db()
