@@ -1,8 +1,6 @@
-import pytest
+
 import mysql.connector
 import stockmanagement
-import datetime
-import matplotlib.pyplot as plt
 
 
 def test_before_add_order():
@@ -50,6 +48,7 @@ def test_after_delete_product():
     assert act == exp
     stockmanagement.product.drop_product()
 
+
 def test_report_generation():
     stockmanagement.s.db_setup()
 
@@ -57,7 +56,7 @@ def test_report_generation():
     mycursor = mydb.cursor()
 
     print("Report  Analysing...")
-    sql = '''select Id, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
+    sql = '''select salesid, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
               concat(round((((yr2021+yr2022+yr2023) / 300) * 100 ),2), '%') as percentage
               from sales;'''
     mycursor.execute(sql)
@@ -65,10 +64,3 @@ def test_report_generation():
     exp = mycursor.fetchall()
     act = stockmanagement.s.report_generation()
     assert exp == act
-
-
-
-
-
-
-
