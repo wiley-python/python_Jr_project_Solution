@@ -51,19 +51,19 @@ def test_after_delete_product():
     stockmanagement.product.drop_product()
 
 def test_report_generation():
-    stockmanagement.stu.db_setup()
+    stockmanagement.s.db_setup()
 
     mydb = mysql.connector.connect(host="localhost", user="root", passwd="root", database="stock")
     mycursor = mydb.cursor()
 
-    print("Report Card Analysing...")
-    sql = '''select Id, Name , M1,M2,M3, (M1+M2+M3) as sum, 
-                  concat(round((((M1+M2+M3) / 300) * 100 ),2), '%') as percentage
-                  from Students;'''
+    print("Report  Analysing...")
+    sql = '''select Id, ProductName , yr2021,yr2022,yr2023, (yr2021+yr2022+yr2023) as sum, 
+              concat(round((((yr2021+yr2022+yr2023) / 300) * 100 ),2), '%') as percentage
+              from sales;'''
     mycursor.execute(sql)
 
     exp = mycursor.fetchall()
-    act = stockmanagement.stu.report_generation()
+    act = stockmanagement.s.report_generation()
     assert exp == act
 
 
