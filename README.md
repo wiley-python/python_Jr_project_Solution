@@ -1,23 +1,26 @@
 # python_Jr_project_Solution
-##Problem Statement
+**Problem Statement
 
 RV traders are into different business sectors. Their growth in business is well known and is one of the most popular business groups. As the business started to grow, RV Traders found it difficult to keep a track of  inventory levels, sales, and order fulfillment. Hence RV traders wanted to have a software which can track some of their business details. A stock management project can help businesses improve their inventory control and streamline their order fulfillment process, ultimately leading to increased customer satisfaction and profitability.
 
-###Current System
+**Current System
 
 The current system for stock management in RV traders is manual tracking of inventory levels, sales, and order fulfilment using spreadsheets or paper-based records. The manual process of updating inventory levels and sales data also leads to delays in order processing and fulfilment, which impacts in customer satisfaction.
 
-###Project Scope/Functionalities
+**Project Scope/Functionalities
 
 The Project should include the below functionality:
+
 Order fulfilment system.
       This system will track incoming orders and ensure that the necessary products are pulled from the inventory to fulfil the orders.
+      
 Sales Tracking System.
       This system will record sales data for each product, including the number of units sold, the year of sale, and the price at which the product was sold.
+      
 Product Tracking System
       This system will record product details including product code, price, product quantity, and category to generate the report as and when required.
 
-##Files to be Edited:
+**Files to be Edited:
     In this project you need to implement: 
       step-1: setup database in class - database 
           with different methods - 
