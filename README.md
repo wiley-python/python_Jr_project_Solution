@@ -32,21 +32,21 @@ In this project you need to implement:
                   user="root", 
                   passwd="root",
                   database="stock")_
-            _create a db of name stock
-            create a table product with columns of 
+            _create a db of name stock_
+            _create a table product with columns of 
                  (pcode int(4) PRIMARY KEY,
                   pname char(30) NOT NULL,
                   pprice float(8,2),
                   pqty int(4),
-                  pcat char(30))
-            create a table order with columns of 
+                  pcat char(30))_
+            _create a table order with columns of 
                    (orderid int(4)PRIMARY KEY,
                    orderdate DATE ,
                    pcode char(30) NOT NULL ,
                    pprice float(8,2) ,
                    pqty int(4) ,
                    supplier char(50),
-                   pcat char(30))_            
+                   pcat char(30))       _    
    2. **list_database** -
            show tables  -  _functionality - shows the tables that you created _
            
