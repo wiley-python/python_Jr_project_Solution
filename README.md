@@ -26,7 +26,8 @@ In this project you need to implement:
 
 **step-1**: setup database in class - **database**  with different methods - 
    
-   1. **create_database** -    
+   1. **create_database** -  
+     
                   _(Includes connecting to db with credentials 
                   host="localhost", 
                   user="root", 
@@ -46,7 +47,8 @@ In this project you need to implement:
                    pprice float(8,2) ,
                    pqty int(4) ,
                    supplier char(50),
-                   pcat char(30))       _    
+                   pcat char(30))   _   
+                   
    2. **list_database** -
            show tables  -  _functionality - shows the tables that you created _
            
