@@ -26,9 +26,12 @@ In this project you need to implement:
 
 **step-1**: setup database in class - **database**  with different methods - 
    
-   **create_database** -   
-   
-   _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
+   1. **create_database** -    
+                  _(Includes connecting to db with credentials 
+                  host="localhost", 
+                  user="root", 
+                  passwd="root",
+                  database="stock")_
             _create a db of name stock
             create a table product with columns of 
                  (pcode int(4) PRIMARY KEY,
@@ -43,9 +46,8 @@ In this project you need to implement:
                    pprice float(8,2) ,
                    pqty int(4) ,
                    supplier char(50),
-                   pcat char(30))_     
-                   
-   **list_database** -
+                   pcat char(30))_            
+   2. **list_database** -
            show tables  -  _functionality - shows the tables that you created _
            
 **step-2**: implement order management in class **order** with different methods
