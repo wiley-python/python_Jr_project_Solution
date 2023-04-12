@@ -118,7 +118,7 @@ In this project you need to implement:
        Each commit will be tested automatically against the relevant testcases, 
        so you may need to submit several commits as you refine your solution.
 
-        Once you are finished with the assignment (either all test cases passed or not), 
+        Once you are finished with the assignment (either all test cases passed or not),
         make sure to lable this commit as "final commit" 
         (this may mean a previous commit passing and 
         you making a slight edit to the latter in order to mark 
