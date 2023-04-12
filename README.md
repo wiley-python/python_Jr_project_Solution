@@ -1,5 +1,5 @@
 # python_Jr_project_Solution
-** Problem Statement
+## Problem Statement
 
 RV traders are into different business sectors. Their growth in business is well known and is one of the most popular business groups. As the business started to grow, RV Traders found it difficult to keep a track of  inventory levels, sales, and order fulfillment. Hence RV traders wanted to have a software which can track some of their business details. A stock management project can help businesses improve their inventory control and streamline their order fulfillment process, ultimately leading to increased customer satisfaction and profitability.
 
