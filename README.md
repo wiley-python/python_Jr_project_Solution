@@ -21,11 +21,13 @@ Product Tracking System
       _This system will record product details including product code, price, product quantity, and category to generate the report as and when required._
 
 ### Files to be Edited:
+
 In this project you need to implement:
 
 **step-1**: setup database in class - **database** 
+
    with different methods - 
-     **create_database** - 
+    **create_database** - 
            _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
             _create a db of name stock
             create a table product with columns of 
