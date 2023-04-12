@@ -21,29 +21,30 @@ Product Tracking System
       _This system will record product details including product code, price, product quantity, and category to generate the report as and when required._
 
 ### Files to be Edited:
-In this project you need to implement: 
-      **step-1**: setup database in class - **database** 
-          with different methods - 
-              **create_database** - 
-                _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
-                _create a db of name stock
-                create a table product with columns of 
-                         (pcode int(4) PRIMARY KEY,
-                         pname char(30) NOT NULL,
-                         pprice float(8,2),
-                         pqty int(4),
-                         pcat char(30))
-                 create a table order with columns of 
-                        (orderid int(4)PRIMARY KEY,
-                        orderdate DATE ,
-                        pcode char(30) NOT NULL ,
-                        pprice float(8,2) ,
-                        pqty int(4) ,
-                        supplier char(50),
-                        pcat char(30))_
-              **list_database** -
-                  show tables  -  _functionality - shows the tables that you created _
-    **step-2**: implement order management in class **order**
+In this project you need to implement:
+
+**step-1**: setup database in class - **database** 
+   with different methods - 
+     **create_database** - 
+           _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
+            _create a db of name stock
+            create a table product with columns of 
+                 (pcode int(4) PRIMARY KEY,
+                  pname char(30) NOT NULL,
+                  pprice float(8,2),
+                  pqty int(4),
+                  pcat char(30))
+            create a table order with columns of 
+                   (orderid int(4)PRIMARY KEY,
+                   orderdate DATE ,
+                   pcode char(30) NOT NULL ,
+                   pprice float(8,2) ,
+                   pqty int(4) ,
+                   supplier char(50),
+                   pcat char(30))_
+      **list_database** -
+           show tables  -  _functionality - shows the tables that you created _
+ **step-2**: implement order management in class **order**
            with different methods
               **add_order** - _functionality - adding order details to the database_
               **list_order** - _functionality - list all the orders from the database_
