@@ -27,8 +27,8 @@ In this project you need to implement:
 **step-1**: setup database in class - **database** 
 
    with different methods - 
-    **create_database** - 
-           _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
+   
+   **create_database** -   _(Includes connecting to db with credentials host="localhost", user="root", passwd="root",database="stock")_
             _create a db of name stock
             create a table product with columns of 
                  (pcode int(4) PRIMARY KEY,
@@ -44,21 +44,36 @@ In this project you need to implement:
                    pqty int(4) ,
                    supplier char(50),
                    pcat char(30))_
-      **list_database** -
+                   
+   **list_database** -
+   
            show tables  -  _functionality - shows the tables that you created _
- **step-2**: implement order management in class **order**
+           
+**step-2**: implement order management in class **order**
+
            with different methods
-              **add_order** - _functionality - adding order details to the database_
-              **list_order** - _functionality - list all the orders from the database_
-              **drop_order** - _functionality - delete all data from the order table_
-     **step-3**: implement product management in class **product**
+           
+   **add_order** - _functionality - adding order details to the database_
+   
+   **list_order** - _functionality - list all the orders from the database_
+   
+   **drop_order** - _functionality - delete all data from the order table_
+   
+**step-3**: implement product management in class **product**
+
             with following methods
-               **add_product** - _functionality - add product details to the database_
-               **update_product** - _functionality - update product details to the database_
-               **list_product** - _functionality - list all the product details from database_
-               **delete_product** - _functionality - delete product from database with where pcode _
-               **drop_product **- _functionality - drop product table from database_
-     **step - 4**: setup sales database with **sales class **
+            
+   **add_product** - _functionality - add product details to the database_
+   
+   **update_product** - _functionality - update product details to the database_
+   
+   **list_product** - _functionality - list all the product details from database_
+   
+   **delete_product** - _functionality - delete product from database with where pcode _
+   
+   **drop_product **- _functionality - drop product table from database_
+   
+**step - 4**: setup sales database with **sales class **
              with following methods
              **db_setup** - _create table sales with columns of 
                        (salesid int, 
