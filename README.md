@@ -21,7 +21,7 @@ Product Tracking System
       _This system will record product details including product code, price, product quantity, and category to generate the report as and when required._
 
 ### Files to be Edited:
-    In this project you need to implement: 
+In this project you need to implement: 
       **step-1**: setup database in class - **database** 
           with different methods - 
               **create_database** - 
@@ -48,7 +48,6 @@ Product Tracking System
               **add_order** - _functionality - adding order details to the database_
               **list_order** - _functionality - list all the orders from the database_
               **drop_order** - _functionality - delete all data from the order table_
-
      **step-3**: implement product management in class **product**
             with following methods
                **add_product** - _functionality - add product details to the database_
@@ -68,8 +67,8 @@ Product Tracking System
              **drop_db** : functionality: _drop table sales_
              **report_yr2021**: functionality: _data visualization of yr2021  in a bar graph with 
                      (ProductNames and yr2021 marks as x and y axies )_
+                     
 # --------Steps to Solve the Problem---------
-
 
 ## Step1: Make sure you have Required Tools:
 
